@@ -40,5 +40,10 @@ class ContainerShipTest {
         containership.setName("Ocean Hope");
         assertEquals("Ocean Hope", containership.getName());
     }
+
+    @Test
+    public void testChangeStatus() {
+
+    }
     
 }
