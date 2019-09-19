@@ -1,0 +1,36 @@
+Test List
+Status (Enum)
+1. Check that each status has an appropriate textual description, i.e. “Docked at home”, “Docked away”, and “On voyage...”.
+Hint: Make a set constructor for the Enum that takes a String with the description and use the constructor when declaring the Enum fields.
+ContainerShip
+2. Create a container ship named Marco Polo launched on November 6 2012. It has a DWT of 187625 tonnes and can carry up to 16020 containers. It is empty and docked at home.
+3. Create a container ship named Hansa Carrier launched on Februar 1 1989. It has a DWT of 26366 tonnes and can carry up 1799 containers. It is empty and docked at home.
+4. Change the name of the Hansa Carrier to Ocean Hope.
+Hint: Make a service method for creating a new instance of ContainerShip with the Hansa Carrier attributes. Use the service method every time you make a new test.
+5. Change the status of the Hansa Carrier to simulate departure from home and arrival at a new port. I.e. change the status to “on voyage” and then to “docked away”.
+6. Change the Hansa Carrier’s cargo to Nike shoes while docked at home.
+7. Check that the system ignores an attempt to change the Hansa Carrier’s cargo from Nike shoes to empty while being on a voyage.
+8. Change the Hansa Carrier’s cargo from Nike shoes to empty while docked away.
+9. Display a full report for the newly constructed Hansa Carrier. The report should include the name, launch date, DWT, container count, status, and cargo.
+Tanker
+10. Create a tanker named Seawise Giant launched on December 4 1979. It has a DWT of 564763 tonnes and carry up to 673380 cubic meters of fluid. It is empty and docked at home.
+11. Create a tanker named Exxon Valdez launched on October 14 1986. It has a DWT of 214861 tonnes and carry up to 235000 cubic meters of fluid. It is empty and docked at home.
+Hint: Start looking for code duplication between ContainerShip and Tanker each time you add a test. Pull redundant code up into an abstract super class named FreighterBase. Declare an interface named Freighter and implement it in FreighterBase.
+12. Change the name of the Exxon Valdez to Mediterranean.
+Hint: Make a service method for creating a new instance of Tanker with the Exxon Valdez attributes. Use the service method every time you make a new test.
+13. Change the status of the Exxon Valdez to simulate departure from home and arrival at a new port. I.e. change the status to “on voyage” and then to “docked away”.
+14. Change the Exxon Valdez’ cargo to crude oil while docked at home.
+15. Check that the system ignores an attempt to change the Exxon Valdez’ cargo from crude oil to empty while being on a voyage.
+16. Change the Exxon Valdez’ cargo from crude oil to empty while docked away.
+17. Display a full report for the newly constructed Exxon Valdez. The report should include the name, launch date, DWT, tonnage volume, status, and cargo.
+FreighterBase
+Hint: Look for code duplication between the test classes ContainerShipTest and TankerTest. Pull redundant code up into an abstract super class named FreighterBaseTest and extend it from ContainerShipTest and TankerTest. Consolidation of the test code in FreighterBaseTest assures adherence to the Liskov Substitution Principle.
+Fleet
+18. Create a new, empty fleet, which consists of 0 freighters with a total DWT of 0 tonnes.
+19. Add the Hansa Carrier and the Exxon Valdez to a new fleet. The fleet now consists of 2 freighters with a total DWT of 241227 tonnes.
+20. A new fleet has 0 freighters launched after January 1 1900.
+21. A new fleet consisting of the Hansa Carrier and the Exxon Valdez has 1 freighter launched after May 1 1987.
+22. Create a new fleet consisting of the Hansa Carrier and the Exxon Valdez. Look up the Hansa Carrier by name, change its cargo to Nike shoes and set its status to be on voyage. Display a report for the Hansa Carrier to verify the result of the actions.
+23. Create a new fleet consisting of the Hansa Carrier and the Exxon Valdez. Remove the Exxon Valdez from the fleet by name. Verify that the fleet now consists of 1 freighter. Attempt to look up the Exxon Valdez to verify that it has indeed been removed from the fleet.
+24. A new fleet consisting of the Hansa Carrier and the Exxon Valdez has a total DWT of 241227 tonnes docked at home. After the Hansa Carrier has departed, the fleet has a total DWT of 214861 tonnes docked at home.
+25. A new fleet consisting of the Hansa Carrier and the Exxon Valdez has a total tonnage in container units of 0 containers on voyage. After the Hansa Carrier has departed, the fleet has a total tonnage in container units of 1799 containers on voyage.
