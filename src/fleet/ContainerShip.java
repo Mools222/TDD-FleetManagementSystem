@@ -6,12 +6,14 @@ public class ContainerShip {
     private String name;
     private LocalDate launchDate;
     private int deadweightTonnage, containerCount;
+    private Status status;
 
-    public ContainerShip(String name, LocalDate launchDate, int deadweightTonnage, int containerCount) {
+    public ContainerShip(String name, LocalDate launchDate, int deadweightTonnage, int containerCount, Status status) {
         this.name = name;
         this.launchDate = launchDate;
         this.deadweightTonnage = deadweightTonnage;
         this.containerCount = containerCount;
+        this.status = status;
     }
 
     public String getName() {
@@ -35,10 +37,14 @@ public class ContainerShip {
     }
 
     public Status getStatus() {
-        return Status.DOCKED_AT_HOME;
+        return status;
     }
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
     }
 }

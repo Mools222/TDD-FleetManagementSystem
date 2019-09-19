@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class ContainerShipTest {
     @Test
     public void testCreateContainerShip1() {
-        ContainerShip containership = new ContainerShip("Marco Polo", LocalDate.of(2012, Month.NOVEMBER, 6), 187625, 16020);
+        ContainerShip containership = new ContainerShip("Marco Polo", LocalDate.of(2012, Month.NOVEMBER, 6), 187625, 16020, Status.DOCKED_AT_HOME);
         assertEquals("Marco Polo", containership.getName());
         assertEquals(LocalDate.of(2012, Month.NOVEMBER, 6), containership.getLaunchDate());
         assertEquals(187625, containership.getDeadweightTonnage());
@@ -21,7 +21,7 @@ class ContainerShipTest {
 
     @Test
     public void testCreateContainerShip2() {
-        ContainerShip containership = new ContainerShip("Hansa Carrier", LocalDate.of(1989, Month.FEBRUARY, 1), 26366, 1799);
+        ContainerShip containership = new ContainerShip("Hansa Carrier", LocalDate.of(1989, Month.FEBRUARY, 1), 26366, 1799, Status.DOCKED_AT_HOME);
         assertEquals("Hansa Carrier", containership.getName());
         assertEquals(LocalDate.of(1989, Month.FEBRUARY, 1), containership.getLaunchDate());
         assertEquals(26366, containership.getDeadweightTonnage());
@@ -31,7 +31,7 @@ class ContainerShipTest {
     }
 
     public ContainerShip getHansaCarrier() {
-        return new ContainerShip("Hansa Carrier", LocalDate.of(1989, Month.FEBRUARY, 1), 26366, 1799);
+        return new ContainerShip("Hansa Carrier", LocalDate.of(1989, Month.FEBRUARY, 1), 26366, 1799, Status.DOCKED_AT_HOME);
     }
 
     @Test
