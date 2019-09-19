@@ -24,5 +24,6 @@ class ContainerShipTest {
         ContainerShip containership = new ContainerShip("Hansa Carrier", LocalDate.of(1989, Month.FEBRUARY, 1));
         assertEquals("Hansa Carrier", containership.getName());
         assertEquals(LocalDate.of(1989, Month.FEBRUARY, 1), containership.getLaunchDate());
+        assertEquals(26366, containership.getDeadweightTonnage());
     }
 }
