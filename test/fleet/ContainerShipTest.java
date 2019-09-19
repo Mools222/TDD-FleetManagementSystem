@@ -50,4 +50,7 @@ class ContainerShipTest {
         assertEquals(Status.DOCKED_AWAY, containership.getStatus());
     }
 
+    public void testChangeCargo() {
+
+    }
 }
