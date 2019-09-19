@@ -23,6 +23,6 @@ class ContainerShipTest {
     public void testCreateContainerShip2() {
         ContainerShip containership = new ContainerShip("Hansa Carrier");
         assertEquals("Hansa Carrier", containership.getName());
-
+        assertEquals(LocalDate.of(1989, Month.FEBRUARY, 1), containership.getLaunchDate());
     }
 }
