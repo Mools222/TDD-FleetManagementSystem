@@ -55,4 +55,9 @@ public class ContainerShip {
         if (!status.equals(Status.ON_VOYAGE))
             this.cargo = cargo;
     }
+
+    @Override
+    public String toString() {
+        return "Name: " + name + "\nLaunch date: " + launchDate + "\nDWT: " + deadweightTonnage + "\nContainer count: " + containerCount + "\nStatus: " + status.getDescription() + "\nCargo: " + cargo;
+    }
 }
