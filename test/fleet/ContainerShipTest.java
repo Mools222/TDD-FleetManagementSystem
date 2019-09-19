@@ -44,9 +44,17 @@ class ContainerShipTest {
     @Test
     public void testChangeStatus() {
         ContainerShip containership = getHansaCarrier();
+
+        containership.setStatus(Status.DOCKED_AWAY);
+        assertEquals(Status.DOCKED_AT_HOME, containership.getStatus());
+
         containership.setStatus(Status.ON_VOYAGE);
         assertEquals(Status.ON_VOYAGE, containership.getStatus());
+
         containership.setStatus(Status.DOCKED_AWAY);
+        assertEquals(Status.DOCKED_AWAY, containership.getStatus());
+
+        containership.setStatus(Status.DOCKED_AT_HOME);
         assertEquals(Status.DOCKED_AWAY, containership.getStatus());
     }
 

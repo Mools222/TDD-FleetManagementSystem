@@ -46,7 +46,9 @@ public class ContainerShip {
     }
 
     public void setStatus(Status status) {
-        this.status = status;
+        if ((status.equals(Status.ON_VOYAGE) && (this.status.equals(Status.DOCKED_AT_HOME) || this.status.equals(Status.DOCKED_AWAY))) ||
+                ((status.equals(Status.DOCKED_AT_HOME) || status.equals(Status.DOCKED_AWAY)) && this.status.equals(Status.ON_VOYAGE)))
+            this.status = status;
     }
 
     public void setCargo(String cargo) {
