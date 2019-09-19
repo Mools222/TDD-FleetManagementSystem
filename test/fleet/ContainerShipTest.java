@@ -14,5 +14,6 @@ class ContainerShipTest {
         assertEquals("Marco Polo", containership.getName());
         assertEquals(LocalDate.of(2012, Month.NOVEMBER, 6), containership.getLaunchDate());
         assertEquals(187625, containership.getDeadweightTonnage());
+        assertEquals(16020, containership.getContainerCount());
     }
 }
