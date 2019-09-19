@@ -73,5 +73,10 @@ class ContainerShipTest {
         assertEquals("Nike shoes", containership.getCargoDescription());
     }
 
+    @Test
+    public void testReport() {
+
+    }
+
 
 }
