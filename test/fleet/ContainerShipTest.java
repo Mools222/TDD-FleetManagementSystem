@@ -67,8 +67,11 @@ class ContainerShipTest {
 
     @Test
     public void testChangeCargo3() {
-
+        ContainerShip containership = getHansaCarrier();
+        containership.setStatus(Status.DOCKED_AWAY);
+        containership.setCargo("Nike shoes");
+        assertEquals("Nike shoes", containership.getCargoDescription());
     }
 
 
-    }
+}
