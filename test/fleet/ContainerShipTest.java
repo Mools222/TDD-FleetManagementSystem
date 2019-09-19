@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class ContainerShipTest {
     @Test
     public void testCreateContainerShip1() {
-        ContainerShip containership = new ContainerShip("Marco Polo", "empty", LocalDate.of(2012, Month.NOVEMBER, 6), 187625, 16020, Status.DOCKED_AT_HOME);
+        ContainerShip containership = new ContainerShip("Marco Polo", "empty", LocalDate.of(2012, Month.NOVEMBER, 6), 187625, Status.DOCKED_AT_HOME, 16020);
         assertEquals("Marco Polo", containership.getName());
         assertEquals(LocalDate.of(2012, Month.NOVEMBER, 6), containership.getLaunchDate());
         assertEquals(187625, containership.getDeadweightTonnage());
@@ -21,7 +21,7 @@ class ContainerShipTest {
 
     @Test
     public void testCreateContainerShip2() {
-        ContainerShip containership = new ContainerShip("Hansa Carrier", "empty", LocalDate.of(1989, Month.FEBRUARY, 1), 26366, 1799, Status.DOCKED_AT_HOME);
+        ContainerShip containership = new ContainerShip("Hansa Carrier", "empty", LocalDate.of(1989, Month.FEBRUARY, 1), 26366, Status.DOCKED_AT_HOME, 1799);
         assertEquals("Hansa Carrier", containership.getName());
         assertEquals(LocalDate.of(1989, Month.FEBRUARY, 1), containership.getLaunchDate());
         assertEquals(26366, containership.getDeadweightTonnage());
@@ -31,7 +31,7 @@ class ContainerShipTest {
     }
 
     public ContainerShip getHansaCarrier() {
-        return new ContainerShip("Hansa Carrier", "empty", LocalDate.of(1989, Month.FEBRUARY, 1), 26366, 1799, Status.DOCKED_AT_HOME);
+        return new ContainerShip("Hansa Carrier", "empty", LocalDate.of(1989, Month.FEBRUARY, 1), 26366, Status.DOCKED_AT_HOME, 1799);
     }
 
     @Test
@@ -84,7 +84,7 @@ class ContainerShipTest {
     @Test
     public void testReport() {
         ContainerShip containership = getHansaCarrier();
-        assertEquals("Name: Hansa Carrier\nLaunch date: 1989-02-01\nDWT: 26366\nContainer count: 1799\nStatus: Docked at home\nCargo: empty", containership.toString());
+        assertEquals("Name: Hansa Carrier\nLaunch date: 1989-02-01\nDWT: 26366\nStatus: Docked at home\nCargo: empty\nContainer count: 1799", containership.toString());
     }
 
 
