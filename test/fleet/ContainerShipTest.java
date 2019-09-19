@@ -65,5 +65,10 @@ class ContainerShipTest {
         assertEquals("empty", containership.getCargoDescription());
     }
 
+    @Test
+    public void testChangeCargo3() {
 
-}
+    }
+
+
+    }
