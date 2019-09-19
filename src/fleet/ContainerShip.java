@@ -1,17 +1,17 @@
 package fleet;
 
 import java.time.LocalDate;
-import java.time.Month;
 
 public class ContainerShip {
     private String name;
     private LocalDate launchDate;
-    private int deadweightTonnage;
+    private int deadweightTonnage, containerCount;
 
-    public ContainerShip(String name, LocalDate launchDate, int deadweightTonnage) {
+    public ContainerShip(String name, LocalDate launchDate, int deadweightTonnage, int containerCount) {
         this.name = name;
         this.launchDate = launchDate;
         this.deadweightTonnage = deadweightTonnage;
+        this.containerCount = containerCount;
     }
 
     public String getName() {
@@ -27,7 +27,7 @@ public class ContainerShip {
     }
 
     public int getContainerCount() {
-        return 16020;
+        return containerCount;
     }
 
     public String getCargoDescription() {
