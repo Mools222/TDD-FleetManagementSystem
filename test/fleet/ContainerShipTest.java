@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.time.LocalDate;
 import java.time.Month;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ContainerShipTest {
     @Test
@@ -29,4 +29,9 @@ class ContainerShipTest {
         assertEquals("empty", containership.getCargoDescription());
         assertEquals(Status.DOCKED_AT_HOME, containership.getStatus());
     }
+
+    public void testChangeName() {
+
+    }
+
 }
