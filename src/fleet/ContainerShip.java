@@ -6,10 +6,12 @@ import java.time.Month;
 public class ContainerShip {
     private String name;
     private LocalDate launchDate;
+    private int deadweightTonnage;
 
-    public ContainerShip(String name, LocalDate launchDate) {
+    public ContainerShip(String name, LocalDate launchDate, int deadweightTonnage) {
         this.name = name;
         this.launchDate = launchDate;
+        this.deadweightTonnage = deadweightTonnage;
     }
 
     public String getName() {
@@ -21,7 +23,7 @@ public class ContainerShip {
     }
 
     public int getDeadweightTonnage() {
-        return 187625;
+        return deadweightTonnage;
     }
 
     public int getContainerCount() {
