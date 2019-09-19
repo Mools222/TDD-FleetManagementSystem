@@ -31,7 +31,9 @@ class ContainerShipTest {
     }
 
     public void testChangeName() {
-
+        ContainerShip containership = new ContainerShip("Hansa Carrier", LocalDate.of(1989, Month.FEBRUARY, 1), 26366, 1799);
+        containership.setName("Ocean Hope");
+        assertEquals("Ocean Hope", containership.getName());
     }
 
 }
