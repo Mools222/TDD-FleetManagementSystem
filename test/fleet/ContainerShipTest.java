@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class ContainerShipTest {
     @Test
     public void testCreateContainerShip1() {
-        ContainerShip containership = new ContainerShip();
+        ContainerShip containership = new ContainerShip("Marco Polo");
         assertEquals("Marco Polo", containership.getName());
         assertEquals(LocalDate.of(2012, Month.NOVEMBER, 6), containership.getLaunchDate());
         assertEquals(187625, containership.getDeadweightTonnage());
@@ -21,7 +21,7 @@ class ContainerShipTest {
 
     @Test
     public void testCreateContainerShip2() {
-        ContainerShip containership = new ContainerShip();
+        ContainerShip containership = new ContainerShip("Hansa Carrier");
         assertEquals("Hansa Carrier", containership.getName());
 
     }

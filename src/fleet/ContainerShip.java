@@ -4,9 +4,14 @@ import java.time.LocalDate;
 import java.time.Month;
 
 public class ContainerShip {
+    private String name;
+
+    public ContainerShip(String name) {
+        this.name = name;
+    }
 
     public String getName() {
-        return "Marco Polo";
+        return name;
     }
 
     public LocalDate getLaunchDate() {
