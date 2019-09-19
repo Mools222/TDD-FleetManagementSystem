@@ -10,14 +10,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class TankerTest {
     @Test
     public void testCreateTanker1() {
-        Tanker tanker = new Tanker();
+        Tanker tanker = new Tanker("Seawise Giant", "empty", LocalDate.of(1979, Month.DECEMBER, 4), 564763, 673380, Status.DOCKED_AT_HOME);
         assertEquals("Seawise Giant", tanker.getName());
         assertEquals(LocalDate.of(1979, Month.DECEMBER, 4), tanker.getLaunchDate());
         assertEquals(564763, tanker.getDeadweightTonnage());
         assertEquals(673380, tanker.getTonnageVolume());
         assertEquals("empty", tanker.getCargoDescription());
         assertEquals(Status.DOCKED_AT_HOME, tanker.getStatus());
-
     }
 
 }

@@ -3,14 +3,14 @@ package fleet;
 import java.time.LocalDate;
 
 public class ContainerShip {
-    private String name, cargo;
+    private String name, cargoDescription;
     private LocalDate launchDate;
     private int deadweightTonnage, containerCount;
     private Status status;
 
-    public ContainerShip(String name, String cargo, LocalDate launchDate, int deadweightTonnage, int containerCount, Status status) {
+    public ContainerShip(String name, String cargoDescription, LocalDate launchDate, int deadweightTonnage, int containerCount, Status status) {
         this.name = name;
-        this.cargo = cargo;
+        this.cargoDescription = cargoDescription;
         this.launchDate = launchDate;
         this.deadweightTonnage = deadweightTonnage;
         this.containerCount = containerCount;
@@ -34,7 +34,7 @@ public class ContainerShip {
     }
 
     public String getCargoDescription() {
-        return cargo;
+        return cargoDescription;
     }
 
     public Status getStatus() {
@@ -51,13 +51,13 @@ public class ContainerShip {
             this.status = status;
     }
 
-    public void setCargo(String cargo) {
+    public void setCargoDescription(String cargoDescription) {
         if (!status.equals(Status.ON_VOYAGE))
-            this.cargo = cargo;
+            this.cargoDescription = cargoDescription;
     }
 
     @Override
     public String toString() {
-        return "Name: " + name + "\nLaunch date: " + launchDate + "\nDWT: " + deadweightTonnage + "\nContainer count: " + containerCount + "\nStatus: " + status.getDescription() + "\nCargo: " + cargo;
+        return "Name: " + name + "\nLaunch date: " + launchDate + "\nDWT: " + deadweightTonnage + "\nContainer count: " + containerCount + "\nStatus: " + status.getDescription() + "\nCargo: " + cargoDescription;
     }
 }
