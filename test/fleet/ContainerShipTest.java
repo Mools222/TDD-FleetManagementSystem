@@ -2,6 +2,9 @@ package fleet;
 
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalDate;
+import java.time.Month;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class ContainerShipTest {
@@ -9,6 +12,7 @@ class ContainerShipTest {
     public void testCreateContainerShip1() {
         ContainerShip containership = new ContainerShip();
         assertEquals("Marco Polo", containership.getName());
+        assertEquals(LocalDate.of(2012, Month.NOVEMBER, 6), containership.getLaunchDate());
     }
 
 }
