@@ -12,4 +12,8 @@ public class ContainerShip {
     public LocalDate getLaunchDate() {
         return LocalDate.of(2012, Month.NOVEMBER, 6);
     }
+
+    public int getDeadweightTonnage() {
+        return 187625;
+    }
 }
