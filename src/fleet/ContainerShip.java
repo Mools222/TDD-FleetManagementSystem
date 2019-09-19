@@ -20,4 +20,8 @@ public class ContainerShip {
     public int getContainerCount() {
         return 16020;
     }
+
+    public String getCargoDescription() {
+        return "empty";
+    }
 }
