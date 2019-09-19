@@ -21,5 +21,8 @@ class ContainerShipTest {
 
     @Test
     public void testCreateContainerShip2() {
+        ContainerShip containership = new ContainerShip();
+        assertEquals("Hansa Carrier", containership.getName());
+
     }
 }
