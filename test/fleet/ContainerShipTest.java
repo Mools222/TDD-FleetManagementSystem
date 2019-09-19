@@ -18,4 +18,8 @@ class ContainerShipTest {
         assertEquals("empty", containership.getCargoDescription());
         assertEquals(Status.DOCKED_AT_HOME, containership.getStatus());
     }
+
+    @Test
+    public void testCreateContainerShip2() {
+    }
 }
