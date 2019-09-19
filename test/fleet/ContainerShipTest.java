@@ -13,6 +13,6 @@ class ContainerShipTest {
         ContainerShip containership = new ContainerShip();
         assertEquals("Marco Polo", containership.getName());
         assertEquals(LocalDate.of(2012, Month.NOVEMBER, 6), containership.getLaunchDate());
+        assertEquals(187625, containership.getDeadweightTonnage());
     }
-
 }
