@@ -5,9 +5,11 @@ import java.time.Month;
 
 public class ContainerShip {
     private String name;
+    private LocalDate launchDate;
 
-    public ContainerShip(String name) {
+    public ContainerShip(String name, LocalDate launchDate) {
         this.name = name;
+        this.launchDate = launchDate;
     }
 
     public String getName() {
@@ -15,7 +17,7 @@ public class ContainerShip {
     }
 
     public LocalDate getLaunchDate() {
-        return LocalDate.of(2012, Month.NOVEMBER, 6);
+        return launchDate;
     }
 
     public int getDeadweightTonnage() {
