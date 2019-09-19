@@ -37,4 +37,8 @@ public class ContainerShip {
     public Status getStatus() {
         return Status.DOCKED_AT_HOME;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
