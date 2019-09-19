@@ -50,7 +50,7 @@ public class ContainerShip {
     }
 
     public void setCargo(String cargo) {
-        if (status.equals(Status.DOCKED_AT_HOME))
+        if (!status.equals(Status.ON_VOYAGE))
             this.cargo = cargo;
     }
 }
