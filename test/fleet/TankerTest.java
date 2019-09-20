@@ -30,11 +30,34 @@ class TankerTest {
         assertEquals(Status.DOCKED_AT_HOME, tanker.getStatus());
     }
 
+    public Tanker getExxonValdez() {
+        return new Tanker("Exxon Valdez", "empty", LocalDate.of(1986, Month.OCTOBER, 14), 214861, Status.DOCKED_AT_HOME, 235000);
+    }
+
+
     @Test
     public void testChangeName() {
-        Tanker tanker = new Tanker("Exxon Valdez", "empty", LocalDate.of(1986, Month.OCTOBER, 14), 214861, Status.DOCKED_AT_HOME, 235000);
+        Tanker tanker = getExxonValdez();
         tanker.setName("Mediterranean");
         assertEquals("Mediterranean", tanker.getName());
     }
+
+    @Test
+    public void testChangeStatus() {
+        Tanker tanker = getExxonValdez();
+
+        tanker.setStatus(Status.DOCKED_AWAY);
+        assertEquals(Status.DOCKED_AT_HOME, tanker.getStatus());
+
+        tanker.setStatus(Status.ON_VOYAGE);
+        assertEquals(Status.ON_VOYAGE, tanker.getStatus());
+
+        tanker.setStatus(Status.DOCKED_AWAY);
+        assertEquals(Status.DOCKED_AWAY, tanker.getStatus());
+
+        tanker.setStatus(Status.DOCKED_AT_HOME);
+        assertEquals(Status.DOCKED_AWAY, tanker.getStatus());
+    }
+
 
 }
