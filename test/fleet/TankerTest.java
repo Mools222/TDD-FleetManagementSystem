@@ -18,4 +18,16 @@ class TankerTest {
         assertEquals("empty", tanker.getCargoDescription());
         assertEquals(Status.DOCKED_AT_HOME, tanker.getStatus());
     }
+
+    @Test
+    public void testCreateTanker2() {
+        Tanker tanker = new Tanker("Exxon Valdez", "empty", LocalDate.of(1986, Month.OCTOBER, 14), 214861, Status.DOCKED_AT_HOME, 235000);
+        assertEquals("Exxon Valdez", tanker.getName());
+        assertEquals(LocalDate.of(1986, Month.OCTOBER, 14), tanker.getLaunchDate());
+        assertEquals(214861, tanker.getDeadweightTonnage());
+        assertEquals(235000, tanker.getTonnageVolume());
+        assertEquals("empty", tanker.getCargoDescription());
+        assertEquals(Status.DOCKED_AT_HOME, tanker.getStatus());
+
+    }
 }
