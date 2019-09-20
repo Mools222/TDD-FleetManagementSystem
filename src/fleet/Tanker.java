@@ -13,4 +13,10 @@ public class Tanker extends FreighterBase {
     public int getTonnageVolume() {
         return tonnageVolume;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nTonnage volume: " + tonnageVolume;
+    }
+
 }

@@ -34,7 +34,6 @@ class TankerTest {
         return new Tanker("Exxon Valdez", "empty", LocalDate.of(1986, Month.OCTOBER, 14), 214861, Status.DOCKED_AT_HOME, 235000);
     }
 
-
     @Test
     public void testChangeName() {
         Tanker tanker = getExxonValdez();
@@ -86,4 +85,11 @@ class TankerTest {
         tanker.setCargoDescription("empty");
         assertEquals("empty", tanker.getCargoDescription());
     }
+
+    @Test
+    public void testReport() {
+        Tanker tanker = getExxonValdez();
+        assertEquals("Name: Exxon Valdez\nLaunch date: 1986-10-14\nDWT: 214861\nStatus: Docked at home\nCargo: empty\nTonnage volume: 235000", tanker.toString());
+    }
+
 }
