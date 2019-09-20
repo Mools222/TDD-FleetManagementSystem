@@ -59,5 +59,31 @@ class TankerTest {
         assertEquals(Status.DOCKED_AWAY, tanker.getStatus());
     }
 
+    @Test
+    public void testChangeCargo1() {
+        Tanker tanker = getExxonValdez();
+        tanker.setCargoDescription("crude oil");
+        assertEquals("crude oil", tanker.getCargoDescription());
+    }
 
+    @Test
+    public void testChangeCargo2() {
+        Tanker tanker = getExxonValdez();
+        tanker.setStatus(Status.ON_VOYAGE);
+        tanker.setCargoDescription("crude oil");
+        assertEquals("empty", tanker.getCargoDescription());
+    }
+
+    @Test
+    public void testChangeCargo3() {
+        Tanker tanker = getExxonValdez();
+        tanker.setCargoDescription("crude oil");
+        assertEquals("crude oil", tanker.getCargoDescription());
+        tanker.setStatus(Status.ON_VOYAGE);
+        assertEquals(Status.ON_VOYAGE, tanker.getStatus());
+        tanker.setStatus(Status.DOCKED_AWAY);
+        assertEquals(Status.DOCKED_AWAY, tanker.getStatus());
+        tanker.setCargoDescription("empty");
+        assertEquals("empty", tanker.getCargoDescription());
+    }
 }

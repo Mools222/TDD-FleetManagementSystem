@@ -76,9 +76,14 @@ class ContainerShipTest {
     @Test
     public void testChangeCargo3() {
         ContainerShip containership = getHansaCarrier();
-        containership.setStatus(Status.DOCKED_AWAY);
         containership.setCargoDescription("Nike shoes");
         assertEquals("Nike shoes", containership.getCargoDescription());
+        containership.setStatus(Status.ON_VOYAGE);
+        assertEquals(Status.ON_VOYAGE, containership.getStatus());
+        containership.setStatus(Status.DOCKED_AWAY);
+        assertEquals(Status.DOCKED_AWAY, containership.getStatus());
+        containership.setCargoDescription("empty");
+        assertEquals("empty", containership.getCargoDescription());
     }
 
     @Test
