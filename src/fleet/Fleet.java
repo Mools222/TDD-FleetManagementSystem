@@ -3,8 +3,6 @@ package fleet;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Iterator;
-import java.util.function.Predicate;
 
 public class Fleet {
     private ArrayList<Freighter> freighterList;
@@ -44,5 +42,14 @@ public class Fleet {
 
     public void removeFreighterByName(String name) {
         freighterList.removeIf(freighter -> freighter.getName().equals(name));
+    }
+
+    public int getDeadweightTonnageDocketAtHome() {
+        int total = 0;
+        for (Freighter freighter : freighterList) {
+            if (freighter.getStatus().equals(Status.DOCKED_AT_HOME))
+                total += freighter.getDeadweightTonnage();
+        }
+        return total;
     }
 }
