@@ -22,6 +22,7 @@ class FleetTest {
         Fleet fleet = new Fleet(containership, tanker);
 
         assertEquals(2, fleet.getNumberOfFreighters());
+        assertEquals(241227, fleet.getTotalDeadweightTonnage());
 
     }
 }
