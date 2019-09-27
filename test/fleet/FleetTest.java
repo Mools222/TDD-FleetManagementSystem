@@ -44,10 +44,11 @@ class FleetTest {
 
     @Test
     public void testCreateAndChangeFleet() {
-        Freighter freighter = getHansaCarrier();
-        Fleet fleet = new Fleet(freighter, getExxonValdez());
-        assertEquals(freighter, fleet.getFreighterByName("Hansa Carrier"));
+        Freighter hansaCarrier = getHansaCarrier();
+        Fleet fleet = new Fleet(hansaCarrier, getExxonValdez());
+        assertEquals(hansaCarrier, fleet.getFreighterByName("Hansa Carrier"));
         assertNotEquals(getHansaCarrier(), fleet.getFreighterByName("Hansa Carrier"));
+        
     }
 
 }

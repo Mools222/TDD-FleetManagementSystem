@@ -31,4 +31,12 @@ public class Fleet {
         }
         return number;
     }
+
+    public Freighter getFreighterByName(String name) {
+        for (Freighter freighter : freighterList) {
+            if (freighter.getName().equals(name))
+                return freighter;
+        }
+        return null;
+    }
 }
