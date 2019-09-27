@@ -52,4 +52,8 @@ public class Fleet {
         }
         return total;
     }
+
+    public int getContainerCountOnVoyage() {
+        return 0;
+    }
 }
