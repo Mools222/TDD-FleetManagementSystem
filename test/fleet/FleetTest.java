@@ -43,7 +43,7 @@ class FleetTest {
     }
 
     @Test
-    public void testCreateAndChangeFleet() {
+    public void testCreateAndChangeFleet1() {
         Freighter hansaCarrier = getHansaCarrier();
         Fleet fleet = new Fleet(hansaCarrier, getExxonValdez());
         assertEquals(hansaCarrier, fleet.getFreighterByName("Hansa Carrier"));
@@ -54,5 +54,14 @@ class FleetTest {
         assertEquals(Status.ON_VOYAGE, fleet.getFreighterByName("Hansa Carrier").getStatus());
         assertEquals("Name: Hansa Carrier\nLaunch date: 1989-02-01\nDWT: 26366\nStatus: On voyage...\nCargo: Nike shoes\nContainer count: 1799", fleet.getFreighterByName("Hansa Carrier").toString());
     }
+
+    @Test
+    public void testCreateAndChangeFleet2() {
+        Fleet fleet = new Fleet(getHansaCarrier(), getExxonValdez());
+        fleet.removeFreighterByName("Exxon Valdez");
+        assertNull(fleet.getFreighterByName("Exxon Valdez"));
+
+    }
+
 
 }
