@@ -2,13 +2,27 @@ package fleet;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Fleet {
-    private ArrayList<Freighter> freighterList;
+    private ArrayList<Freighter> freighterList = new ArrayList<>();
 
     public Fleet(Freighter... freighters) {
-        freighterList = new ArrayList<>(Arrays.asList(freighters));
+        for (Freighter freighter : freighters) {
+            addFreighter(freighter);
+        }
+    }
+
+    public void addFreighter(Freighter freighter) {
+        boolean duplicateName = false;
+        for (Freighter listedFreighter : freighterList) {
+            if (listedFreighter.getName().equals(freighter.getName())) {
+                duplicateName = true;
+                break;
+            }
+        }
+
+        if (!duplicateName)
+            freighterList.add(freighter);
     }
 
     public int getNumberOfFreighters() {
