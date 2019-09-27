@@ -80,4 +80,15 @@ class FleetTest {
         fleet.getFreighterByName("Hansa Carrier").setStatus(Status.ON_VOYAGE);
         assertEquals(1799, fleet.getContainerCountOnVoyage());
     }
+
+    @Test
+    public void testAddDuplicateFreighter() {
+        Fleet fleet = new Fleet(getHansaCarrier());
+        assertEquals(1, fleet.getNumberOfFreighters());
+        fleet.addFreighter(getExxonValdez());
+        assertEquals(2, fleet.getNumberOfFreighters());
+        fleet.addFreighter(getHansaCarrier());
+        fleet.addFreighter(getExxonValdez());
+        assertEquals(2, fleet.getNumberOfFreighters());
+    }
 }
