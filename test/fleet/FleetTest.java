@@ -24,4 +24,12 @@ class FleetTest {
         assertEquals(2, fleet.getNumberOfFreighters());
         assertEquals(241227, fleet.getTotalDeadweightTonnage());
     }
+
+    @Test
+    public void testCreateFleet3() {
+        Fleet fleet = new Fleet();
+        assertEquals(0, fleet.getNumberOfFreightersLaunchedAfter(LocalDate.of(1900, Month.JANUARY, 1)));
+    }
+
+
 }
