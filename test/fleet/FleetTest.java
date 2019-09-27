@@ -52,6 +52,7 @@ class FleetTest {
         assertEquals("Nike shoes", fleet.getFreighterByName("Hansa Carrier").getCargoDescription());
         fleet.getFreighterByName("Hansa Carrier").setStatus(Status.ON_VOYAGE);
         assertEquals(Status.ON_VOYAGE, fleet.getFreighterByName("Hansa Carrier").getStatus());
+        assertEquals("Name: Hansa Carrier\nLaunch date: 1989-02-01\nDWT: 26366\nStatus: On voyage...\nCargo: Nike shoes\nContainer count: 1799", fleet.getFreighterByName("Hansa Carrier").toString());
     }
 
 }
