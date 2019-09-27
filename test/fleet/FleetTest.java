@@ -62,7 +62,7 @@ class FleetTest {
         assertEquals(exxonValdez, fleet.getFreighterByName("Exxon Valdez"));
         fleet.removeFreighterByName("Exxon Valdez");
         assertNull(fleet.getFreighterByName("Exxon Valdez"));
-
+        assertEquals(1, fleet.getNumberOfFreighters());
     }
 
 
