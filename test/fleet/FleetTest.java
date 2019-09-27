@@ -15,11 +15,17 @@ class FleetTest {
         assertEquals(0, fleet.getTotalDeadweightTonnage());
     }
 
+    public ContainerShip getHansaCarrier() {
+        return new ContainerShip("Hansa Carrier", "empty", LocalDate.of(1989, Month.FEBRUARY, 1), 26366, Status.DOCKED_AT_HOME, 1799);
+    }
+
+    public Tanker getExxonValdez() {
+        return new Tanker("Exxon Valdez", "empty", LocalDate.of(1986, Month.OCTOBER, 14), 214861, Status.DOCKED_AT_HOME, 235000);
+    }
+
     @Test
     public void testCreateFleet2() {
-        ContainerShip containership = new ContainerShip("Hansa Carrier", "empty", LocalDate.of(1989, Month.FEBRUARY, 1), 26366, Status.DOCKED_AT_HOME, 1799);
-        Tanker tanker = new Tanker("Exxon Valdez", "empty", LocalDate.of(1986, Month.OCTOBER, 14), 214861, Status.DOCKED_AT_HOME, 235000);
-        Fleet fleet = new Fleet(containership, tanker);
+        Fleet fleet = new Fleet(getHansaCarrier(), getExxonValdez());
 
         assertEquals(2, fleet.getNumberOfFreighters());
         assertEquals(241227, fleet.getTotalDeadweightTonnage());
@@ -30,6 +36,7 @@ class FleetTest {
         Fleet fleet = new Fleet();
         assertEquals(0, fleet.getNumberOfFreightersLaunchedAfter(LocalDate.of(1900, Month.JANUARY, 1)));
     }
+
 
 
 }
