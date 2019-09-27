@@ -69,6 +69,8 @@ class FleetTest {
     public void testFleetInfo() {
         Fleet fleet = new Fleet(getHansaCarrier(), getExxonValdez());
         assertEquals(241227, fleet.getDeadweightTonnageDocketAtHome());
+        fleet.getFreighterByName("Hansa Carrier").setStatus(Status.ON_VOYAGE);
+        assertEquals(214861, fleet.getDeadweightTonnageDocketAtHome());
     }
 
 }
