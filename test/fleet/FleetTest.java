@@ -80,6 +80,4 @@ class FleetTest {
         fleet.getFreighterByName("Hansa Carrier").setStatus(Status.ON_VOYAGE);
         assertEquals(1799, fleet.getContainerCountOnVoyage());
     }
-
-
 }

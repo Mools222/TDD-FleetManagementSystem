@@ -18,5 +18,4 @@ public class Tanker extends FreighterBase {
     public String toString() {
         return super.toString() + "\nTonnage volume: " + tonnageVolume;
     }
-
 }

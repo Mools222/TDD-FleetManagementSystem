@@ -54,6 +54,11 @@ public class Fleet {
     }
 
     public int getContainerCountOnVoyage() {
-        return 0;
+        int total = 0;
+        for (Freighter freighter : freighterList) {
+            if (freighter instanceof ContainerShip && freighter.getStatus().equals(Status.ON_VOYAGE))
+                total += ((ContainerShip) freighter).getContainerCount();
+        }
+        return total;
     }
 }
