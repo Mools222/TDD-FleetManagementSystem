@@ -50,6 +50,8 @@ class FleetTest {
         assertNotEquals(getHansaCarrier(), fleet.getFreighterByName("Hansa Carrier"));
         fleet.getFreighterByName("Hansa Carrier").setCargoDescription("Nike shoes");
         assertEquals("Nike shoes", fleet.getFreighterByName("Hansa Carrier").getCargoDescription());
+        fleet.getFreighterByName("Hansa Carrier").setStatus(Status.ON_VOYAGE);
+        assertEquals(Status.ON_VOYAGE, fleet.getFreighterByName("Hansa Carrier").getStatus());
     }
 
 }
