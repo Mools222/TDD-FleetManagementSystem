@@ -57,7 +57,9 @@ class FleetTest {
 
     @Test
     public void testCreateAndChangeFleet2() {
-        Fleet fleet = new Fleet(getHansaCarrier(), getExxonValdez());
+        Freighter exxonValdez = getExxonValdez();
+        Fleet fleet = new Fleet(getHansaCarrier(), exxonValdez);
+        assertEquals(exxonValdez, fleet.getFreighterByName("Exxon Valdez"));
         fleet.removeFreighterByName("Exxon Valdez");
         assertNull(fleet.getFreighterByName("Exxon Valdez"));
 

@@ -3,6 +3,8 @@ package fleet;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
+import java.util.function.Predicate;
 
 public class Fleet {
     private ArrayList<Freighter> freighterList;
@@ -38,5 +40,9 @@ public class Fleet {
                 return freighter;
         }
         return null;
+    }
+
+    public void removeFreighterByName(String name) {
+        freighterList.removeIf(freighter -> freighter.getName().equals(name));
     }
 }
