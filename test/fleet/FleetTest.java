@@ -9,5 +9,7 @@ class FleetTest {
     public void testCreateFleet1() {
         Fleet fleet = new Fleet();
         assertEquals(0, fleet.getNumberOfFreighters());
+        assertEquals(0, fleet.getTotalDeadweightTonnage());
+
     }
 }
