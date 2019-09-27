@@ -77,6 +77,8 @@ class FleetTest {
     public void testFleetInfo2() {
         Fleet fleet = new Fleet(getHansaCarrier(), getExxonValdez());
         assertEquals(0, fleet.getContainerCountOnVoyage());
+        fleet.getFreighterByName("Hansa Carrier").setStatus(Status.ON_VOYAGE);
+        assertEquals(1799, fleet.getContainerCountOnVoyage());
     }
 
 
