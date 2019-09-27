@@ -42,4 +42,12 @@ class FleetTest {
         assertEquals(1, fleet.getNumberOfFreightersLaunchedAfter(LocalDate.of(1987, Month.MAY, 1)));
     }
 
+    @Test
+    public void testCreateAndChangeFleet() {
+        Freighter freighter = getHansaCarrier();
+        Fleet fleet = new Fleet(freighter, getExxonValdez());
+        assertEquals(freighter, fleet.getFreighterByName("Hansa Carrier"));
+        assertNotEquals(getHansaCarrier(), fleet.getFreighterByName("Hansa Carrier"));
+    }
+
 }
