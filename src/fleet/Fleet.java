@@ -15,6 +15,10 @@ public class Fleet {
     }
 
     public int getTotalDeadweightTonnage() {
-        return 0;
+        int total = 0;
+        for (Freighter freighter : freighterList) {
+            total += freighter.getDeadweightTonnage();
+        }
+        return total;
     }
 }

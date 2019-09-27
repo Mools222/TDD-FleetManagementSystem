@@ -23,6 +23,5 @@ class FleetTest {
 
         assertEquals(2, fleet.getNumberOfFreighters());
         assertEquals(241227, fleet.getTotalDeadweightTonnage());
-
     }
 }
