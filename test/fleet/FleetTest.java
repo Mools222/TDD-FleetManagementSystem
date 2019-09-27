@@ -48,7 +48,8 @@ class FleetTest {
         Fleet fleet = new Fleet(hansaCarrier, getExxonValdez());
         assertEquals(hansaCarrier, fleet.getFreighterByName("Hansa Carrier"));
         assertNotEquals(getHansaCarrier(), fleet.getFreighterByName("Hansa Carrier"));
-        
+        fleet.getFreighterByName("Hansa Carrier").setCargoDescription("Nike shoes");
+        assertEquals("Nike shoes", fleet.getFreighterByName("Hansa Carrier").getCargoDescription());
     }
 
 }
