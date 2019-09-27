@@ -1,5 +1,6 @@
 package fleet;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -20,5 +21,9 @@ public class Fleet {
             total += freighter.getDeadweightTonnage();
         }
         return total;
+    }
+
+    public int getNumberOfFreightersLaunchedAfter(LocalDate date) {
+        return 0;
     }
 }
