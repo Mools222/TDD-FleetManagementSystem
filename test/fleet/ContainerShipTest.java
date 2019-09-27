@@ -91,6 +91,4 @@ class ContainerShipTest {
         ContainerShip containership = getHansaCarrier();
         assertEquals("Name: Hansa Carrier\nLaunch date: 1989-02-01\nDWT: 26366\nStatus: Docked at home\nCargo: empty\nContainer count: 1799", containership.toString());
     }
-
-
 }

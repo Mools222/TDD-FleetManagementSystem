@@ -91,5 +91,4 @@ class TankerTest {
         Tanker tanker = getExxonValdez();
         assertEquals("Name: Exxon Valdez\nLaunch date: 1986-10-14\nDWT: 214861\nStatus: Docked at home\nCargo: empty\nTonnage volume: 235000", tanker.toString());
     }
-
 }

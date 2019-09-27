@@ -3,19 +3,19 @@ package fleet;
 import java.time.LocalDate;
 
 public interface Freighter {
-    public String getName();
+    String getName();
 
-    public String getCargoDescription();
+    String getCargoDescription();
 
-    public LocalDate getLaunchDate();
+    LocalDate getLaunchDate();
 
-    public int getDeadweightTonnage();
+    int getDeadweightTonnage();
 
-    public Status getStatus();
+    Status getStatus();
 
-    public void setName(String name);
+    void setName(String name);
 
-    public void setStatus(Status status);
+    void setStatus(Status status);
 
-    public void setCargoDescription(String cargoDescription);
+    void setCargoDescription(String cargoDescription);
 }
