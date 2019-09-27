@@ -26,7 +26,6 @@ class FleetTest {
     @Test
     public void testCreateFleet2() {
         Fleet fleet = new Fleet(getHansaCarrier(), getExxonValdez());
-
         assertEquals(2, fleet.getNumberOfFreighters());
         assertEquals(241227, fleet.getTotalDeadweightTonnage());
     }
@@ -37,6 +36,10 @@ class FleetTest {
         assertEquals(0, fleet.getNumberOfFreightersLaunchedAfter(LocalDate.of(1900, Month.JANUARY, 1)));
     }
 
-
+    @Test
+    public void testCreateFleet4() {
+        Fleet fleet = new Fleet(getHansaCarrier(), getExxonValdez());
+        assertEquals(1, fleet.getNumberOfFreightersLaunchedAfter(LocalDate.of(1987, Month.MAY, 1)));
+    }
 
 }
