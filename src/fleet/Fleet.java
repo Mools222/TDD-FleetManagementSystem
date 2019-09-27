@@ -24,6 +24,11 @@ public class Fleet {
     }
 
     public int getNumberOfFreightersLaunchedAfter(LocalDate date) {
-        return 0;
+        int number = 0;
+        for (Freighter freighter : freighterList) {
+            if (freighter.getLaunchDate().compareTo(date) > 0)
+                ++number;
+        }
+        return number;
     }
 }
